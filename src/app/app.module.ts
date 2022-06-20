@@ -6,7 +6,16 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { AboutComponent } from './component/about/about.component';
 import { HomeComponent } from './component/home/home.component';
-import { NavbarComponent } from './component/navbar/navbar.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {search-bar} from "./component/search-bar"
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
+import { GaugeModule } from 'angular-gauge';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from  '@angular/material/select';
+
 
 @NgModule({
   declarations: [
@@ -14,11 +23,19 @@ import { NavbarComponent } from './component/navbar/navbar.component';
     FooterComponent,
     AboutComponent,
     HomeComponent,
-    NavbarComponent
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    FormsModule,
+    GaugeModule.forRoot(),
+    MatFormFieldModule,
+    MatSelectModule,
+    MatTabsModule,
+    MatTabsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
